@@ -1,4 +1,4 @@
-import "@/components/Nodes/styles/StartNode.scss"
+import "@/components/Nodes/styles/index.scss"
 
 const initialNodes = [
   {
@@ -12,7 +12,7 @@ const initialNodes = [
   },
   {
     id: '2',
-    position: { x: 250, y: 70 },
+    position: { x: 180, y: 130 },
     data: {
       label: '🟩',
     },
@@ -20,10 +20,12 @@ const initialNodes = [
   },
   {
     id: '3',
-    position: { x: 350, y: 100 },
+    position: { x: 180, y: 250 },
     data: {
       label: '🟧',
     },
+    type: "codenode",
+    className: 'codeNode'
     // ...nodeDefaults,
   },
   {

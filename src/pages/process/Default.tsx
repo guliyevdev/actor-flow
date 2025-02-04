@@ -10,7 +10,7 @@ import {
   NodeTypes,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Start } from '@/components/Nodes';
+import { Start, Code } from '@/components/Nodes';
 import ButtonEdge from "./CustomEdge.tsx";
 import "./index.css"
 import "./xy-theme.css"
@@ -22,6 +22,7 @@ import { initialEdges, initialNodes } from './initialElements.ts';
 
 const nodeTypes: NodeTypes = {
   startnode: Start,
+  codenode: Code
 };
 const proOptions = { hideAttribution: true };
 export const DefaultProcessPage = () => {
