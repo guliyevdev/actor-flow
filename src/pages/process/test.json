@@ -1,0 +1,104 @@
+[
+    {
+        "obj_type": 1,
+        "obj_id": 8815,
+        "parent_id": 0,
+        "title": "TestFront",
+        "description": "",
+        "status": "active",
+        "params": [],
+        "ref_mask": true,
+        "conv_type": "process",
+        "scheme": {
+            "nodes": [
+                {
+                    "id": "679cce7de0ab123d3101f1d0",
+                    "obj_type": 2,
+                    "condition": {
+                        "logics": [],
+                        "semaphors": []
+                    },
+                    "title": "Final",
+                    "description": "",
+                    "x": 676,
+                    "y": 92,
+                    "uuid": "219fba59-c3ce-470d-99bd-08527f0fac78",
+                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"success\"}",
+                    "options": null
+                },
+                {
+                    "id": "67922512e0ab123d3101c882",
+                    "obj_type": 2,
+                    "condition": {
+                        "logics": [],
+                        "semaphors": []
+                    },
+                    "title": "Final",
+                    "description": "",
+                    "x": 300,
+                    "y": 436,
+                    "uuid": "fbfcd81c-2a9c-48e8-ae29-d6f619b50b0f",
+                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"success\"}",
+                    "options": "{\"save_task\":true}"
+                },
+                {
+                    "id": "67922512e0ab123d3101c881",
+                    "obj_type": 1,
+                    "condition": {
+                        "logics": [
+                            {
+                                "type": "go",
+                                "to_node_id": "6792257be0ab123d3101c884"
+                            }
+                        ],
+                        "semaphors": []
+                    },
+                    "title": "Start",
+                    "description": "",
+                    "x": 296,
+                    "y": -316,
+                    "uuid": "5c03821f-658e-427d-ad58-f54f4f1c399b",
+                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"\"}",
+                    "options": null
+                },
+                {
+                    "id": "6792257be0ab123d3101c884",
+                    "obj_type": 0,
+                    "condition": {
+                        "logics": [
+                            {
+                                "type": "go_if_const",
+                                "to_node_id": "679cce7de0ab123d3101f1d0",
+                                "conditions": [
+                                    {
+                                        "param": "ggg",
+                                        "const": "'ssas'",
+                                        "fun": "eq",
+                                        "cast": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "go",
+                                "to_node_id": "67922512e0ab123d3101c882"
+                            }
+                        ],
+                        "semaphors": []
+                    },
+                    "title": "ddd",
+                    "description": "",
+                    "x": 200,
+                    "y": -16,
+                    "uuid": "9ccd0536-2ef9-43a8-91cd-1bf9c1937259",
+                    "extra": "{\"modeForm\":\"expand\",\"icon\":\"\"}",
+                    "options": null
+                }
+            ],
+            "web_settings": [
+                [],
+                []
+            ]
+        },
+        "uuid": "5272a6da-64fc-4760-8bda-d1a8eb537008"
+    }
+]
