@@ -5,6 +5,6 @@ import style from './style.module.scss'
 export const Start: FC<NodeProps> = () => (
     <>
         <div className={style.triangle}></div>
-      <Handle type="source" position={Position.Bottom} />
+      <Handle type="source" position={Position.Bottom} className="custom-handle"/>
     </>
 );

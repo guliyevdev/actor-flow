@@ -1,2 +1,3 @@
-@import 'variable','code','start';
-
+@forward 'code';
+@forward 'start';
+@forward 'default'

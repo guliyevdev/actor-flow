@@ -28,12 +28,13 @@ export default function CustomEdge({
   });
  
   const onEdgeClick = () => {
-    setEdges((edges) => edges.filter((edge) => edge.id !== id));
+    // setEdges((edges) => edges.filter((edge) => edge.id !== id));
+    alert("Hello world");
   };
  
   return (
     <>
-      <BaseEdge path={edgePath} markerEnd={markerEnd} style={style} />
+      <BaseEdge path={edgePath} markerEnd={markerEnd} style={{...style,stroke: "red",strokeWidth: 2 }} />
       <EdgeLabelRenderer>
       <div
           className="button-edge__label nodrag nopan"

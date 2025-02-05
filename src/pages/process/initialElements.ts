@@ -49,8 +49,8 @@ const initialEdges = [
     id: 'e1-3',
     source: '2',
     target: '3',
-    type:'custom'
-    // style: { stroke: "blue", strokeWidth: 2 },
+    type:'custom',
+    style: { stroke: "blue", strokeWidth: 2 },
   },
 ];
  

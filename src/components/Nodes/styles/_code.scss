@@ -1,3 +1,5 @@
+@use 'variable' as *;
+
 .codeNode {
     width: 200px;
     height: 100px;
@@ -5,5 +7,5 @@
     align-items: center;
     justify-content: center;
     background-color: $wash-me;
-    border: 4px solid $wash-me;
+    // border: 4px solid $wash-me;
 }
