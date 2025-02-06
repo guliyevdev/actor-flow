@@ -7,8 +7,7 @@ import {
     message,
     theme,
     Tooltip,
-    Switch,
-    Menu,
+    Switch
   } from 'antd';
   import { useLocation, useNavigate } from 'react-router-dom';
   import { ReactNode, useEffect, useRef, useState } from 'react';
@@ -18,9 +17,7 @@ import {
     SettingOutlined,
     UserOutlined,
     MoonOutlined,
-    SunOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
+    SunOutlined
   } from '@ant-design/icons';
   import {
     CSSTransition,
@@ -33,8 +30,6 @@ import {
   import { useSelector, useDispatch } from 'react-redux';
   import { toggleTheme } from '../../redux/theme/themeSlice.ts';
 import { Header } from 'antd/es/layout/layout';
-import Sider from 'antd/es/layout/Sider';
-  
   const { Content } = Layout;
   
   type AppLayoutProps = {

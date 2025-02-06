@@ -1,6 +1,7 @@
 import { DragEvent } from 'react';
-
 import styles from './index.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleExclamation, faCode } from '@fortawesome/free-solid-svg-icons';
 
 const onDragStart = (event: DragEvent, nodeType: string) => {
   event.dataTransfer.setData('application/reactflow', nodeType);
@@ -11,21 +12,14 @@ export const Sidebar = () => {
   return (
     <aside className={styles.aside}>
       <div className="react-flow__node-input" onDragStart={(event: DragEvent) => onDragStart(event, 'input')} draggable>
-        Input Node
+      <FontAwesomeIcon icon={faCode} />
       </div>
       <div
         className="react-flow__node-default"
-        onDragStart={(event: DragEvent) => onDragStart(event, 'default')}
+        onDragStart={(event: DragEvent) => onDragStart(event, 'error')}
         draggable
       >
-        Default Node
-      </div>
-      <div
-        className="react-flow__node-output"
-        onDragStart={(event: DragEvent) => onDragStart(event, 'output')}
-        draggable
-      >
-        Output Node
+        <FontAwesomeIcon icon={faCircleExclamation} />
       </div>
     </aside>
   );
