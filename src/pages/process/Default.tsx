@@ -13,15 +13,13 @@ import {
   NodeOrigin
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Start, Code } from '@/components/Nodes';
-import { RedEdge } from "@/components/Edges"
+import { Start,Code,RedEdge,Sidebar } from '@/components';
 import styles from "./style/index.module.css"
 import "./style/xy-theme.css"
 
 const edgeTypes = { rededge: RedEdge };
 
 import { initialEdges, initialNodes } from './initialElements.ts';
-import { Sidebar } from '@/components/Nodes/sidebar/index.tsx';
 // import styles from "./index.module.css"
 
 
