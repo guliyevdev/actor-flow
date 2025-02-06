@@ -43,7 +43,7 @@ const initialEdges = [
     id: 'edge-button',
     source: '1',
     target: '2',
-    type: 'buttonedge',
+    type: 'rededge',
   },
   {
     id: 'e1-3',

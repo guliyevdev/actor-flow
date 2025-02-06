@@ -1,0 +1,1 @@
+export { RedEdge } from "./red/index.tsx"

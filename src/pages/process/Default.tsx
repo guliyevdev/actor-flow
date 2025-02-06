@@ -8,17 +8,19 @@ import {
   useEdgesState,
   addEdge,
   NodeTypes,
+  ReactFlowProvider,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { Start, Code } from '@/components/Nodes';
-import ButtonEdge from "./CustomEdge.tsx";
-import "./index.css"
-import "./xy-theme.css"
+import { RedEdge } from "@/components/Edges"
+import styles from "./style/index.module.css"
+import "./style/xy-theme.css"
 
-const edgeTypes = { buttonedge: ButtonEdge };
+const edgeTypes = { rededge: RedEdge };
 
 import { initialEdges, initialNodes } from './initialElements.ts';
-
+import { Sidebar } from '@/components/Nodes/sidebar/index.tsx';
+// import styles from "./index.module.css"
 
 const nodeTypes: NodeTypes = {
   startnode: Start,
@@ -33,23 +35,28 @@ export const DefaultProcessPage = () => {
     (params) => setEdges((eds) => addEdge(params, eds)),
     [setEdges],
   );
- 
+
   return (
-    <div style={{ width: 'auto', height: '92vh' }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={nodeTypes}
-        edgeTypes={edgeTypes}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        proOptions={proOptions}
-      >
-        <Controls />
-        <MiniMap />
-        <Background variant='none'  gap={12} size={1} />
-      </ReactFlow>
+    <div className={styles.dndflow} style={{ width: 'auto', height: '92vh' }}>
+      <ReactFlowProvider initialNodes={initialNodes} initialEdges={[]}>
+        <div className={styles.wrapper}>
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            nodeTypes={nodeTypes}
+            edgeTypes={edgeTypes}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            proOptions={proOptions}
+          >
+            <Controls />
+            <MiniMap />
+            <Background variant='none' gap={12} size={1} />
+          </ReactFlow>
+        </div>
+        <Sidebar />
+      </ReactFlowProvider>
     </div>
   );
 }
