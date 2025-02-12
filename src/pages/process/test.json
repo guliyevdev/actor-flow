@@ -1,104 +1,268 @@
-[
-    {
-        "obj_type": 1,
-        "obj_id": 8815,
-        "parent_id": 0,
-        "title": "TestFront",
-        "description": "",
-        "status": "active",
-        "params": [],
-        "ref_mask": true,
-        "conv_type": "process",
-        "scheme": {
-            "nodes": [
-                {
-                    "id": "679cce7de0ab123d3101f1d0",
-                    "obj_type": 2,
-                    "condition": {
-                        "logics": [],
-                        "semaphors": []
-                    },
-                    "title": "Final",
-                    "description": "",
-                    "x": 676,
-                    "y": 92,
-                    "uuid": "219fba59-c3ce-470d-99bd-08527f0fac78",
-                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"success\"}",
-                    "options": null
+{
+    "result": "success",
+    "form_data": {
+        "path": "/exam/online_exam",
+        "regions": [
+            {
+                "newline": true,
+                "groups": [
+                    "exam"
+                ],
+                "id": "region_1",
+                "title": "Region 1",
+                "span": 12
+            }
+        ],
+        "name": "online_exam",
+        "groups": [
+            {
+                "newline": true,
+                "color": {
+                    "border": "none",
+                    "bg": "none",
+                    "text": "none"
                 },
-                {
-                    "id": "67922512e0ab123d3101c882",
-                    "obj_type": 2,
-                    "condition": {
-                        "logics": [],
-                        "semaphors": []
+                "objects": [
+                    {
+                        "rule": "r",
+                        "id": "full_name",
+                        "type": "text",
+                        "title": "Ad Soyad",
+                        "value": "Huseyn Bayram",
+                        "span": 2
                     },
-                    "title": "Final",
-                    "description": "",
-                    "x": 300,
-                    "y": 436,
-                    "uuid": "fbfcd81c-2a9c-48e8-ae29-d6f619b50b0f",
-                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"success\"}",
-                    "options": "{\"save_task\":true}"
-                },
-                {
-                    "id": "67922512e0ab123d3101c881",
-                    "obj_type": 1,
-                    "condition": {
-                        "logics": [
+                    {
+                        "newline": false,
+                        "rule": "r",
+                        "id": "time",
+                        "type": "text",
+                        "title": "time_lcl",
+                        "span": 2
+                    },
+                    {
+                        "newline": false,
+                        "rule": "h",
+                        "id": "position",
+                        "type": "text",
+                        "title": "position_lcl",
+                        "value": "Rehber",
+                        "span": 2
+                    },
+                    {
+                        "newline": false,
+                        "rule": "h",
+                        "id": "department_branch",
+                        "type": "text",
+                        "title": "department_branch_lcl",
+                        "value": "AZ100",
+                        "span": 2
+                    },
+                    {
+                        "newline": false,
+                        "rule": "h",
+                        "id": "user_id",
+                        "type": "text",
+                        "title": "user_id_lcl",
+                        "value": 11,
+                        "span": 2
+                    },
+                    {
+                        "newline": false,
+                        "button_type": "dark",
+                        "id": "finish",
+                        "type": "button",
+                        "title": "finish_lcl",
+                        "span": 2
+                    },
+                    {
+                        "newline": false,
+                        "rule": "h",
+                        "id": "user_fin",
+                        "type": "text",
+                        "title": "user_fin_lcl",
+                        "value": "2WH23KA",
+                        "span": 2
+                    },
+                    {
+                        "newline": true,
+                        "keys": {
+                            "img_url": "document_list.certificate_file",
+                            "description": "given_date",
+                            "title": "type"
+                        },
+                        "objects": [
                             {
-                                "type": "go",
-                                "to_node_id": "6792257be0ab123d3101c884"
-                            }
-                        ],
-                        "semaphors": []
-                    },
-                    "title": "Start",
-                    "description": "",
-                    "x": 296,
-                    "y": -316,
-                    "uuid": "5c03821f-658e-427d-ad58-f54f4f1c399b",
-                    "extra": "{\"modeForm\":\"collapse\",\"icon\":\"\"}",
-                    "options": null
-                },
-                {
-                    "id": "6792257be0ab123d3101c884",
-                    "obj_type": 0,
-                    "condition": {
-                        "logics": [
-                            {
-                                "type": "go_if_const",
-                                "to_node_id": "679cce7de0ab123d3101f1d0",
-                                "conditions": [
-                                    {
-                                        "param": "ggg",
-                                        "const": "'ssas'",
-                                        "fun": "eq",
-                                        "cast": "string"
-                                    }
-                                ]
+                                "newline": true,
+                                "rule": "r",
+                                "id": "quest_no5",
+                                "trigger": true,
+                                "title": "Sual",
+                                "type": "text",
+                                "value": "123",
+                                "span": 8
                             },
                             {
-                                "type": "go",
-                                "to_node_id": "67922512e0ab123d3101c882"
+                                "newline": true,
+                                "rule": "h",
+                                "id": "quest_type_5",
+                                "trigger": true,
+                                "title": "Sualın tipi",
+                                "type": "text",
+                                "value": "easy",
+                                "span": 2
+                            },
+                            {
+                                "options": [
+                                    {
+                                        "id": "A.",
+                                        "title": "A. 3"
+                                    },
+                                    {
+                                        "id": "B.",
+                                        "title": "B. 2"
+                                    },
+                                    {
+                                        "id": "C.",
+                                        "title": "C. 123"
+                                    },
+                                    {
+                                        "id": "D.",
+                                        "title": "D. 6"
+                                    }
+                                ],
+                                "rule": "m",
+                                "id": "invoice_list_5",
+                                "position": "vertical",
+                                "trigger": true,
+                                "type": "radio_group",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "r",
+                                "id": "quest_no2",
+                                "trigger": true,
+                                "title": "Sual",
+                                "type": "text",
+                                "value": "test",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "h",
+                                "id": "quest_type_2",
+                                "trigger": true,
+                                "title": "Sualın tipi",
+                                "type": "text",
+                                "value": "normal",
+                                "span": 2
+                            },
+                            {
+                                "options": [
+                                    {
+                                        "id": "A.",
+                                        "title": "A. 1"
+                                    },
+                                    {
+                                        "id": "B.",
+                                        "title": "B. 2"
+                                    },
+                                    {
+                                        "id": "C.",
+                                        "title": "C. 3"
+                                    },
+                                    {
+                                        "id": "D.",
+                                        "title": "D. 4"
+                                    }
+                                ],
+                                "rule": "m",
+                                "id": "invoice_list_2",
+                                "position": "vertical",
+                                "trigger": true,
+                                "type": "radio_group",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "r",
+                                "id": "quest_no4",
+                                "trigger": true,
+                                "title": "Sual",
+                                "type": "text",
+                                "value": "qertytewq",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "h",
+                                "id": "quest_type_4",
+                                "trigger": true,
+                                "title": "Sualın tipi",
+                                "type": "text",
+                                "value": "hard",
+                                "span": 2
+                            },
+                            {
+                                "options": [
+                                    {
+                                        "id": "A.",
+                                        "title": "A. 1"
+                                    },
+                                    {
+                                        "id": "B.",
+                                        "title": "B. 2"
+                                    },
+                                    {
+                                        "id": "C.",
+                                        "title": "C. 3"
+                                    },
+                                    {
+                                        "id": "D.",
+                                        "title": "D. 4"
+                                    }
+                                ],
+                                "rule": "m",
+                                "id": "invoice_list_4",
+                                "position": "vertical",
+                                "trigger": true,
+                                "type": "radio_group",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "r",
+                                "id": "quest_no3",
+                                "title": "Sual",
+                                "type": "text",
+                                "value": "qwerty",
+                                "span": 8
+                            },
+                            {
+                                "newline": true,
+                                "rule": "o",
+                                "id": "answer_3",
+                                "title": "Cavab",
+                                "type": "text",
+                                "span": 8
                             }
                         ],
-                        "semaphors": []
-                    },
-                    "title": "ddd",
-                    "description": "",
-                    "x": 200,
-                    "y": -16,
-                    "uuid": "9ccd0536-2ef9-43a8-91cd-1bf9c1937259",
-                    "extra": "{\"modeForm\":\"expand\",\"icon\":\"\"}",
-                    "options": null
-                }
-            ],
-            "web_settings": [
-                [],
-                []
-            ]
-        },
-        "uuid": "5272a6da-64fc-4760-8bda-d1a8eb537008"
-    }
-]
+                        "id": "questions",
+                        "title": "questions_lcl",
+                        "type": "form_array",
+                        "minimum": 1,
+                        "span": 8
+                    }
+                ],
+                "id": "exam",
+                "span": 12
+            }
+        ],
+        "id": "dynamic",
+        "title": "online_exam_lcl",
+        "type": "form"
+    },
+    "alert": null,
+    "base_url": "https://core-dev.azerpost.az/public/dashboard",
+    "form_id": "dynamic"
+}

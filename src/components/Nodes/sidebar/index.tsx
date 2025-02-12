@@ -13,7 +13,7 @@ export const Sidebar = () => {
   return (
     <aside className={styles.aside}>
       <div className="react-flow__node-input" onDragStart={(event: DragEvent) => onDragStart(event, 'input')} draggable>
-      <Button >
+      <Button>
         <FontAwesomeIcon icon={faCode} />
       </Button>
       </div>

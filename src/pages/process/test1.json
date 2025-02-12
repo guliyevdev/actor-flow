@@ -1,0 +1,99 @@
+{
+    "id": "questions",
+    "title": "questions_lcl",
+    "type": "form_array",
+    "keys": {
+        "img_url": "document_list.certificate_file",
+        "description": "given_date",
+        "title": "type"
+    },
+    "span": 8,
+    "newline": true,
+    "minimum": 1,
+    "objects": data.question_data.questions.map((question) => {
+
+        if (question.quest_type === "open") {
+            return [{
+                    "newline": false,
+                    "bindin": [
+                        "organization_id",
+                        "product_type",
+                        "product_code",
+                        "contract_no"
+                    ],
+                    "options": [{
+                        "id": "retail",
+                        "title": "Retail"
+                    }],
+                    "id": "product_code",
+                    "trigger": true,
+                    "title": "Məhsul kodu",
+                    "type": "select",
+                    "span": 4
+                },
+                {
+                    "id": ⁠ quest_no${question.quest_no} ⁠,
+                    "title": "question_lcl",
+                    "type": "text",
+                    "span": 8,
+                    "rule": "r",
+                    "newline": true,
+                    "value": question.question
+                },
+                {
+                    "id": ⁠ answer_${question.quest_no} ⁠,
+                    "title": "answer_lcl",
+                    "type": "text",
+                    "span": 8,
+                    "rule": "o",
+                    "newline": true
+                },
+                {
+                    "id": ⁠ quest_type_${question.quest_no} ⁠,
+                    "title": "quest_type_lcl",
+                    "type": "text",
+                    "span": 2,
+                    "rule": "h",
+                    "newline": true,
+                    "value": question.quest_type
+                }
+            ];
+        } else {
+
+            return [{
+                    "id": ⁠ quest_no${question.quest_no} ⁠,
+                    "title": "question_lcl",
+                    "type": "text",
+                    "span": 8,
+                    "rule": "r",
+                    "newline": true,
+                    "value": question.question
+                },
+
+                {
+                    "id": ⁠ quest_type_${question.quest_no} ⁠,
+                    "title": "quest_type_lcl",
+                    "type": "text",
+                    "span": 2,
+                    "rule": "h",
+                    "newline": true,
+                    "value": question.quest_type
+                },
+                {
+                    "id": ⁠ invoice_list_${question.quest_no} ⁠,
+                    "type": "radio_group",
+                    "position": "vertical",
+                    "rule": "m",
+                    "trigger": true,
+                    "span": 8,
+                    "options": question.answers.map((answer) => ({
+                        "title": ⁠ ${answer.answer_var ? answer.answer_var + " " : ""}${answer.answer} ⁠,
+                        "id": answer.answer_var || ⁠ answer_${question.quest_no}_${answer.answer} ⁠
+                    }))
+                },
+
+            ];
+        }
+    }).flat()
+
+},
